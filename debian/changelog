@@ -1,5 +1,199 @@
-template-repository (1.0-1) unstable; urgency=medium
+blueprint-compiler (0.20.4-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release (Closes: #1060916)
+  * Run wrap-and-sort -ast
+  * Update Standards Version to 4.7.4
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 01 Apr 2026 14:17:24 -0400
+
+blueprint-compiler (0.19.0-2) unstable; urgency=medium
+
+  * Bump Standards Version to 4.7.3
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 30 Jan 2026 09:55:44 -0500
+
+blueprint-compiler (0.19.0-1) experimental; urgency=medium
+
+  [ Nathan Pratta Teodosio ]
+  * New upstream release
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Wed, 28 Jan 2026 12:37:30 +0100
+
+blueprint-compiler (0.18.0-4) unstable; urgency=medium
+
+  * Salsa CI: Remove explicit disabling of reprotest
+  * Salsa CI: Disable redundant build jobs because this is Architecture: all
+  * Remove unnecessary Priority: optional field
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 05 Dec 2025 20:35:32 -0500
+
+blueprint-compiler (0.18.0-3) unstable; urgency=medium
+
+  * Remove unnecessary Depends: gir1.2-girepository-2.0
+  * Bump Standards Version to 4.7.2
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 14 Nov 2025 17:29:55 -0500
+
+blueprint-compiler (0.18.0-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 12 Aug 2025 18:14:15 -0400
+
+blueprint-compiler (0.18.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * Update watch file now that this is officially part of the GNOME SDK
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 02 Jul 2025 09:50:19 -0400
+
+blueprint-compiler (0.16.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Replace superseded build-dep on appstream-util with appstream
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 03 May 2025 10:26:55 +0200
+
+blueprint-compiler (0.16.0-2) unstable; urgency=medium
+
+  * Update Homepage and other URLs for upstream move to official GNOME group
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 25 Apr 2025 18:11:40 -0400
+
+blueprint-compiler (0.16.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove all patches: applied in new release
+  * Run wrap-and-sort
+  * Update Heather's Uploader email address
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 22 Jan 2025 15:21:28 -0500
+
+blueprint-compiler (0.14.0-2) unstable; urgency=medium
+
+  * Cherry-pick 2 patches to fix build with latest gtk4 (Closes: #1084500)
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Thu, 12 Dec 2024 12:48:18 -0500
+
+blueprint-compiler (0.14.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove remaining patch: applied in new release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 16 Sep 2024 15:06:35 -0400
+
+blueprint-compiler (0.12.0-3) unstable; urgency=medium
+
+  * Cherry-pick commit to fix eartag build
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 31 May 2024 10:22:17 -0400
+
+blueprint-compiler (0.12.0-2) unstable; urgency=medium
+
+  * Update debian/watch
+  * Update Standards Version to 4.7.0
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 28 May 2024 15:20:20 -0400
+
+blueprint-compiler (0.12.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop all patches: applied in new release
+  * Stop using dh-sequence-gnome
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 01 Apr 2024 14:18:15 -0400
+
+blueprint-compiler (0.10.0-4) unstable; urgency=medium
+
+  * Team upload
+  * d/control: Stop generating from d/control.in
+  * d/control: Explicitly depend on gir1.2-girepository-2.0.
+    This is currently a virtual package provided by gir1.2-glib-2.0, but
+    will need to be split out from gir1.2-glib-2.0 before the transition
+    to GNOME 46 (GLib 2.79.x) packages, so depend on the canonical name
+    representing the library that is actually imported.
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 29 Dec 2023 17:41:23 +0000
+
+blueprint-compiler (0.10.0-3) unstable; urgency=medium
+
+  * Add another proposed patch to fix big-endian
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Thu, 14 Sep 2023 15:36:38 -0400
+
+blueprint-compiler (0.10.0-2) unstable; urgency=medium
+
+  * Cherry-pick patch to fix using blueprint-compiler on big-endian
+    (Closes: #1029614) (LP: #2003893)
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 13 Sep 2023 11:34:29 -0400
+
+blueprint-compiler (0.10.0-1) unstable; urgency=medium
+
+  [ Evangelos Ribeiro Tzaras ]
+  * New upstream release
+  * Add debian/upstream/metadata
+
+  [ Jeremy Bícha ]
+  * debian/rules: Run dh_auto_test with xvfb
+  * Build-Depend on gir1.2-adw-1 for build tests
+  * Update standards version to 4.6.2, no changes needed
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 30 Aug 2023 07:51:42 -0400
+
+blueprint-compiler (0.6.0-1) unstable; urgency=high
+
+  * New upstream release
+  * Remove unnecessary patches
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Mon, 09 Jan 2023 21:22:41 +0000
+
+blueprint-compiler (0.4.0-4) unstable; urgency=medium
+
+  * Add python3-gi to Depends (Closes: #1022286, #1022291)
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Tue, 01 Nov 2022 14:45:58 +0100
+
+blueprint-compiler (0.4.0-3) unstable; urgency=medium
+
+  * Cherry-pick patch to fix s390x build
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Tue, 18 Oct 2022 14:29:01 -0600
+
+blueprint-compiler (0.4.0-2) unstable; urgency=medium
+
+  * Cherry-pick patch to fix build
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Mon, 17 Oct 2022 11:30:00 -0600
+
+blueprint-compiler (0.4.0-1) unstable; urgency=medium
+
+  [ Heather Ellsworth ]
+  * New upstream release
+  * Add python3-gi to the Build-Depends and Depends
+  * Add debian/salsa-ci.yml file for pipeline
+
+  [ Jeremy Bicha ]
+  * debian/control.in: Fix Homepage link (Closes: #1009195)
+  * Update debian/gbp.conf & debian/watch for upstream tag format
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Thu, 13 Oct 2022 13:32:38 -0600
+
+blueprint-compiler (0~20220302-3) unstable; urgency=medium
+
+  * debian/control.in: Drop accidental dependency on gnome-shell
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 31 Mar 2022 06:31:58 -0400
+
+blueprint-compiler (0~20220302-2) unstable; urgency=medium
+
+  * Source-only rebuild
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 30 Mar 2022 15:00:44 -0400
+
+blueprint-compiler (0~20220302-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1007936)
+
+ -- Heather Ellsworth <heather.ellsworth@canonical.com>  Tue, 22 Mar 2022 14:00:24 -0600
